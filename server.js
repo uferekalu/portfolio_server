@@ -16,13 +16,7 @@ app.use(
     extended: false
   })
 );
-app.use(
-  cors({
-      origin: "http://localhost:3000", 
-      credentials: true,
-  })
-);
-app.options('*', cors())
+app.use(cors());
 app.use("/public", express.static("public"));
 app.use("/api", serviceRoutes);
 
