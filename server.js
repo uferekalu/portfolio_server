@@ -22,6 +22,7 @@ app.use(
       credentials: true,
   })
 );
+app.options('*', cors())
 app.use("/public", express.static("public"));
 app.use("/api", serviceRoutes);
 
